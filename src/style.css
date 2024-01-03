@@ -1,0 +1,46 @@
+.container_login {
+  display: flex;
+}
+/* .log-text {
+  text-align: center;
+} */
+.outer_div {
+  display: flex;
+  margin: auto;
+  margin-top: 40px;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  width: 25%;
+  font-weight: 100;
+  border: 2px solid black;
+  border-radius: 9px;
+  box-shadow: 3px 3px #e5e5e5, -3px -3px #e5e5e5;
+}
+
+/* .btn_login {
+  text-align: !important center;
+} */
+.container_fluid_product {
+  border: 2px solid black;
+}
+
+.card_product {
+  width: 250px;
+  margin: 20px;
+  background-color: #f2f2f2;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+.img_product {
+  height: 200px;
+  width: 246px;
+
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+.img_product img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
