@@ -1,28 +1,97 @@
-.container_login {
-  display: flex;
-}
-/* .log-text {
-  text-align: center;
-} */
-.outer_div {
-  display: flex;
-  margin: auto;
-  margin-top: 40px;
-  justify-content: center;
-  align-items: center;
-  height: 350px;
-  width: 25%;
-  font-weight: 100;
-  border: 2px solid black;
-  border-radius: 9px;
-  box-shadow: 3px 3px #e5e5e5, -3px -3px #e5e5e5;
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* .btn_login {
-  text-align: !important center;
-} */
+.container_login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-card{
+  width: 450px;
+  height: auto;
+  background:
+    linear-gradient(
+    rgba(35,43,85,0.75),
+    rgba(35,43,85,0.95));
+  border-radius: 8px;
+  box-shadow: 0px 2px 7px rgba(0,0,0,0.2);
+  padding: 3vw;
+}
+
+.outer_div {
+  font-weight: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+  min-height: 300px;
+}
+
+.form-group .label{
+  color: rgba(255,255,255,.7);
+}
+
+.form-group .input{
+  outline: none;
+  border: none;
+  background: rgba(255,255,255,.3);
+  color: rgba(255,255,255,.7);
+}
+
+.form-group .input::placeholder{
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.form-group .input:focus{
+  outline: none;
+  border: none;
+  background: rgba(255,255,255,.3);
+  color: rgba(255,255,255,.7);
+}
+
+.login-heading{
+  text-align: center;
+  color: rgba(255,255,255,.7);
+}
+
 .container_fluid_product {
-  border: 2px solid black;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #F2F2F2;
+  padding: 32px;
+}
+
+.product-list{
+  max-height: calc(100vh - 64px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 2px solid #E5E5E5;
+  border-radius: 8px;
+}
+
+.product-list::-webkit-scrollbar{
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 20px;
+  border: 2px solid rgb(53, 51, 51);
+}
+
+.product-heading{
+  text-align: center;
+  color: rgba(43, 42, 42, 0.7);
 }
 
 .card_product {

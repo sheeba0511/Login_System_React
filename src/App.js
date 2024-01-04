@@ -3,6 +3,8 @@ import Product from "./pages/Product";
 import Admin from "./pages/Admin";
 import Login from "./pages/Login";
 import RequireAuth from "./pages/RequireAuth";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
+      <ToastContainer theme="dark" />
     </>
   );
 }
