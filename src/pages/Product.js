@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "../style.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Product() {
+  const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   useEffect(() => {
     fetch("https://dummyjson.com/products")
@@ -10,11 +12,23 @@ export default function Product() {
         setProducts(data.products);
       });
   }, []);
+  let handleNextPage = () => {
+    navigate("/admin");
+  };
 
   return (
     <>
       <div className="container_fluid_product">
-        <h5 className="product-heading">Product List</h5>
+        <div className="product_header">
+          <p></p>
+          <p>
+            {" "}
+            <h5 className="product-heading">Product List</h5>
+          </p>
+          <button className="btn btn-primary" onClick={handleNextPage}>
+            Go To Admin
+          </button>
+        </div>
         <div className="product-list">
           <div className="row">
             {products.map((item) => (

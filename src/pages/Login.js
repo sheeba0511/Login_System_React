@@ -1,5 +1,3 @@
-//1 Import area
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Form } from "react-bootstrap";
 import { Button } from "react-bootstrap";
@@ -7,21 +5,17 @@ import "../style.css";
 import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import { useState } from "react";
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-//2 function definition area
 export default function Login() {
-  //2.1 hook area
   const navigate = useNavigate();
   const [cookies, setCookie] = useCookies(["token"]);
   const [username, setUsername] = useState(null);
   const [password, setPassword] = useState(null);
-  //2.2 function definition
+
   let handleSubmit = (username, password) => {
     let data = {
-      // username: "kminchelle",
-      // password: "0lelplR",
       username: username,
       password: password,
     };
@@ -38,10 +32,9 @@ export default function Login() {
       .then((data) => {
         if (data.token) {
           setCookie("token", data.token);
-          toast('Logged In Successfully');
+          toast("Logged In Successfully");
           navigate("/product");
-        }
-        else{
+        } else {
           toast(data.message);
         }
       })
@@ -49,8 +42,6 @@ export default function Login() {
         console.log(err);
       });
   };
-
-  //return area
   return (
     <>
       <div className="container_login">
@@ -59,11 +50,21 @@ export default function Login() {
           <Form className="outer_div">
             <Form.Group className="form-group" controlId="formBasictext">
               <Form.Label className="label">Name</Form.Label>
-              <Form.Control type="text" placeholder="Enter Name" className="input" onChange={(e) => setUsername(e.target.value)} />
+              <Form.Control
+                type="text"
+                placeholder="Enter Name"
+                className="input"
+                onChange={(e) => setUsername(e.target.value)}
+              />
             </Form.Group>
             <Form.Group className="form-group" controlId="formBasicPassword">
               <Form.Label className="label">Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" className="input" onChange={(e) => setPassword(e.target.value)} />
+              <Form.Control
+                type="password"
+                placeholder="Password"
+                className="input"
+                onChange={(e) => setPassword(e.target.value)}
+              />
             </Form.Group>
             <Button
               className="btn_login"

@@ -92,6 +92,8 @@
 }
 
 .card_product {
+  text-align: center;
+  font-weight: 100;
   width: 250px;
   margin: 20px;
   background-color: #f2f2f2;
@@ -101,7 +103,6 @@
 .img_product {
   height: 200px;
   width: 246px;
-
   background-color: #ffffff;
   border-radius: 10px;
 }
@@ -110,14 +111,31 @@
   height: 100%;
   width: 100%;
 }
-/* Admin CSS */
-.admin_text {
-  text-align: center;
+.product_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container_fluid_admin {
+  width: 100vw;
+  overflow: hidden;
+  background-color: #f2f2f2;
+  padding: 32px;
 }
 .table_admin {
   display: flex;
   justify-content: center;
   text-align: center;
+  background-color: #e5e5e5;
+}
+.admin_text {
+  text-align: center;
+  color: rgba(43, 42, 42, 0.7);
+  /* padding: 10px; */
+}
+
+table {
+  width: 100%;
 }
 .img_products2 img {
   height: 90px;
@@ -130,4 +148,17 @@ table th {
 }
 table td {
   border: 1px solid black;
+}
+.modal_card {
+  background: linear-gradient(rgba(35, 43, 85, 0.75), rgba(35, 43, 85, 0.95));
+  border-radius: 8px;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.2);
+}
+.product_text {
+  color: rgba(255, 255, 255, 0.7);
+}
+.modal_del {
+  background: linear-gradient(rgba(35, 43, 85, 0.75), rgba(35, 43, 85, 0.95));
+  border-radius: 8px;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.2);
 }
